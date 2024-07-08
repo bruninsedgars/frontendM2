@@ -1,4 +1,9 @@
-button {
+.property-sale-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.property-sale-container button {
   background: #4CAF50;
   color: white;
   border: none;
@@ -8,6 +13,6 @@ button {
   border-radius: 5px;
 }
 
-button:hover {
+.property-sale-container button:hover {
   background: #45a049;
 }

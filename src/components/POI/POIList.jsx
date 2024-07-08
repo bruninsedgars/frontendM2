@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { getPOIs, deletePOI } from '../../api/api';
 import POI from './POI';
 import POIForm from './POIForm';
 
@@ -8,15 +7,15 @@ const POIList = () => {
 
   useEffect(() => {
     const fetchPOIs = async () => {
-      const response = await getPOIs();
-      setPOIs(response.data);
+     /*  const response = await getPOIs();
+      setPOIs(response.data); */
     };
 
     fetchPOIs();
   }, []);
 
   const handleDelete = async (id) => {
-    await deletePOI(id);
+    /* await deletePOI(id); */
     setPOIs(pois.filter(poi => poi.id !== id));
   };
 

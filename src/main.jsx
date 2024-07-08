@@ -1,28 +1,29 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import App from './App';
-import Login from './components/Auth/Login';
 import Signup from './components/Auth/Signup';
 import POIList from './components/POI/POIList';
 import EventList from './components/Events/EventList';
-import VideoList from './components/Videos/VideoList';
 import Donation from './components/Donation';
-import './styles.css';
+import PropertySale from './components/PropertySale';
+import Rules from './components/Rules';
+import History from './components/History';
+import './styles/style.css';
 
-ReactDOM.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
-      <Switch>
-        <Route path="/" exact component={App} />
-        <Route path="/login" component={Login} />
-        <Route path="/signup" component={Signup} />
-        <Route path="/pois" component={POIList} />
-        <Route path="/events" component={EventList} />
-        <Route path="/videos" component={VideoList} />
-        <Route path="/donate" component={Donation} />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/pois" element={<POIList />} />
+        <Route path="/events" element={<EventList />} />
+        <Route path="/donate" element={<Donation />} />
+        <Route path="/property-sale" element={<PropertySale />} />
+        <Route path="/rules" element={<Rules />} />
+        <Route path="/history" element={<History />} />
+      </Routes>
     </Router>
   </React.StrictMode>,
-  document.getElementById('root')
 );
