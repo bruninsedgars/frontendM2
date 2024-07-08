@@ -1,5 +1,14 @@
-function App() {
-  return <>Ready to code with Mantine, a router would be nice in there 😺</>
-}
+import React from 'react';
+import NavBar from './components/NavBar';
+import Home from './components/Home';
+import Donation from './components/Donation';
 
-export default App
+const App = () => (
+  <div>
+    <NavBar />
+    <Home />
+    <Donation />
+  </div>
+);
+
+export default App;
