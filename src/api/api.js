@@ -1,9 +1,10 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:4000', 
+  baseURL: 'http://localhost:5000',
 });
 
-export const getEvents = () => api.get('/events');
-export const addEvent = (event) => api.post('/events', event);
-export const deleteEvent = (id) => api.delete(`/events/${id}`);
+export const getPOIs = () => api.get('/pois');
+export const addPOI = (poi) => api.post('/pois', poi);
+export const updatePOI = (id, poi) => api.put(`/pois/${id}`, poi);
+export const deletePOI = (id) => api.delete(`/pois/${id}`);

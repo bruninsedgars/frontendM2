@@ -9,6 +9,8 @@ import Donation from './components/Donation';
 import PropertySale from './components/PropertySale';
 import Rules from './components/Rules';
 import History from './components/History';
+import PhotoGallery from './components/PhotoGallery';
+import GoogleMap from './components/GoogleMap';
 import './styles/style.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -23,6 +25,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/property-sale" element={<PropertySale />} />
         <Route path="/rules" element={<Rules />} />
         <Route path="/history" element={<History />} />
+        <Route path="/gallery" element={<PhotoGallery />} />
+        <Route path="/map" element={<GoogleMap />} />
       </Routes>
     </Router>
   </React.StrictMode>,

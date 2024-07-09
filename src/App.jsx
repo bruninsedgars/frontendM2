@@ -1,14 +1,15 @@
 import React from 'react';
-/* import NavBar from './components/NavBar';
+ import NavBar from './components/NavBar';
 import Home from './components/Home';
-import Donation from './components/Donation'; */
+import Donation from './components/Donation'; 
 
 const App = () => (
   <div>
-{/*     <NavBar />
+   <NavBar />
     <Home />
-    <Donation /> */}
+    <Donation /> 
   Village properties for SALE jaut 1 € per km2
+
   </div>
 );
 
@@ -28,6 +29,7 @@ const App = () => (
     <PropertySale />
   </div>
 );
+
 
 export default App;
 

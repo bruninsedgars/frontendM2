@@ -13,10 +13,13 @@ const NavBar = () => {
         <li><Link to="/property-sale">Property Sale</Link></li>
         <li><Link to="/rules">Rules</Link></li>
         <li><Link to="/history">History</Link></li>
+        <li><Link to="/gallery">Photo Gallery</Link></li>
+        <li><Link to="/map">Map</Link></li>
       </ul>
     </nav>
   );
 };
 
 export default NavBar;
+
 
