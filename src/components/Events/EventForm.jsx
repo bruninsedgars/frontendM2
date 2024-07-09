@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { addEvent } from '../../api/api';
+//import { addEvent } from '../../api/api';
 
 const EventForm = ({ setEvents }) => {
   const [form, setForm] = useState({ name: '', description: '' });
@@ -12,9 +12,9 @@ const EventForm = ({ setEvents }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await addEvent(form);
+      /* const response = await addEvent(form);
       setEvents(prevEvents => [...prevEvents, response.data]);
-      setForm({ name: '', description: '' });
+      setForm({ name: '', description: '' }); */
     } catch (error) {
       alert('Failed to add event');
     }

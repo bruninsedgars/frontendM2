@@ -1,31 +1,29 @@
 import React from 'react';
-import Gallery from 'react-photo-gallery';
+import { SimpleGrid, Image, Container, Title } from '@mantine/core';
 
 const photos = [
-  {
-    src: '/images/lake.jpg',
-    width: 4,
-    height: 3,
-  },
-  {
-    src: '/images/church.jpg',
-    width: 1,
-    height: 1,
-  },
-  {
-    src: '/images/school.jpg',
-    width: 4,
-    height: 3,
-  },
-  // Add more photos if needed
+  { src: '/images/lake.jpg', title: 'Lake' },
+  { src: '/images/church.jpg', title: 'Church' },
+  { src: '/images/school.jpg', title: 'School' },
 ];
 
 const PhotoGallery = () => {
   return (
-    <div>
-      <h2>Photo Gallery</h2>
-      <Gallery photos={photos} />
-    </div>
+    <Container>
+      <Title order={2} style={{ marginBottom: '20px' }}>Photo Gallery</Title>
+      <SimpleGrid cols={3} spacing="lg">
+        {photos.map((photo, index) => (
+          <Image
+            key={index}
+            src={photo.src}
+            alt={photo.title}
+            caption={photo.title}
+            radius="md"
+            withPlaceholder
+          />
+        ))}
+      </SimpleGrid>
+    </Container>
   );
 };
 

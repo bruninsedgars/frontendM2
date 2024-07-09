@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getEvents, deleteEvent } from '../../api/api';
+// import { getEvents, deleteEvent } from '../../api/api';
 import Event from './Event';
 import EventForm from './EventForm';
 
@@ -8,16 +8,16 @@ const EventList = () => {
 
   useEffect(() => {
     const fetchEvents = async () => {
-      const response = await getEvents();
-      setEvents(response.data);
+      /* const response = await getEvents();
+      setEvents(response.data); */
     };
 
     fetchEvents();
   }, []);
 
   const handleDelete = async (id) => {
-    await deleteEvent(id);
-    setEvents(events.filter(event => event.id !== id));
+    /* await deleteEvent(id);
+    setEvents(events.filter(event => event.id !== id)); */
   };
 
   return (
